@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: nb;
+    src: url(./NBInternationalProBoo.ttf);
+}
+@font-face {
+    font-family: rej ;
+    src: url(./Rejouice-Headline.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: nb;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.page1{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.page1 video{
+    position: absolute;
+}
+.page1-cont{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+nav{
+    padding: 2vmax;
+}
+
+.page1-cont h1 span{
+    width: 100%;
+   font-size: 30vmax;
+   font-family: rej;
+   font-weight: 500;
+   line-height: 27vw;
+
+}
+
+
+
