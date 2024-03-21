@@ -22,8 +22,8 @@ html,body{
 }
 
 .cursor{
-    height: 7vw;
-    width: 7vw;
+    height: 7.5vw;
+    width: 7.5vw;
     background-color: #FF5F38;
     position: fixed;
     z-index: 99;
@@ -63,7 +63,15 @@ nav{
    font-family: rej;
    font-weight: 500;
    line-height: 27vw;
+}
 
+.page2{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #FAF8F3;
+}
+.cont2{
+    border-bottom:  1px solid black ;
 }
 
 
