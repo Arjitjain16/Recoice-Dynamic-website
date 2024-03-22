@@ -1,46 +1,49 @@
-gsap.registerPlugin(ScrollTrigger);
+function locmotive(){
+  gsap.registerPlugin(ScrollTrigger);
 
-const locoScroll = new LocomotiveScroll({
-  el: document.querySelector(".main"),
-  smooth: true,
+  const locoScroll = new LocomotiveScroll({
+    el: document.querySelector(".main"),
+    smooth: true,
 
-  // for tablet smooth
-  tablet: { smooth: true },
+    // for tablet smooth
+    tablet: { smooth: true },
 
-  // for mobile
-  smartphone: { smooth: true }
-});
-locoScroll.on("scroll", ScrollTrigger.update);
+    // for mobile
+    smartphone: { smooth: true }
+  });
+  locoScroll.on("scroll", ScrollTrigger.update);
 
-ScrollTrigger.scrollerProxy(".main", {
-  scrollTop(value) {
-    return arguments.length
-      ? locoScroll.scrollTo(value, 0, 0)
-      : locoScroll.scroll.instance.scroll.y;
-  },
-  getBoundingClientRect() {
-    return {
-      top: 0,
-      left: 0,
-      width: window.innerWidth,
-      height: window.innerHeight
-    };
-  }
+  ScrollTrigger.scrollerProxy(".main", {
+    scrollTop(value) {
+      return arguments.length
+        ? locoScroll.scrollTo(value, 0, 0)
+        : locoScroll.scroll.instance.scroll.y;
+    },
+    getBoundingClientRect() {
+      return {
+        top: 0,
+        left: 0,
+        width: window.innerWidth,
+        height: window.innerHeight
+      };
+    }
 
-  // follwoing line is not required to work pinning on touch screen
+    // follwoing line is not required to work pinning on touch screen
 
-  /* pinType: document.querySelector(".main").style.transform
-    ? "transform"
-    : "fixed"*/
-});
-
-
-ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-
-ScrollTrigger.refresh();
+    /* pinType: document.querySelector(".main").style.transform
+      ? "transform"
+      : "fixed"*/
+  });
 
 
+  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
+  ScrollTrigger.refresh();
+
+}
+locmotive()
+
+//------------Cursor move effect ---------------------------------------------------
 function cursorEffect(){
     const page1Cont = document.querySelector(".page1-cont")
 const cursor = document.querySelector(".cursor")
@@ -68,5 +71,20 @@ page1Cont.addEventListener("mouseleave" ,function(e){
 })
 
 }
-
 cursorEffect()
+
+//-----------page2-------------------------------------------------------
+
+gsap.from(".logo h1",{
+  y:120,
+  stagger : 0.2,
+  duration : 1,
+  ScrollTrigger : {
+    trigger : ".cont2",
+    scroller : ".main",
+    start : "top 50%",
+    end : "top 46%",
+    markers : true,
+    scrub : 2
+  }
+})

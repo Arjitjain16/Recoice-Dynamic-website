@@ -22,8 +22,8 @@ html,body{
 }
 
 .cursor{
-    height: 7.5vw;
-    width: 7.5vw;
+    height: 8vw;
+    width: 8vw;
     background-color: #FF5F38;
     position: fixed;
     z-index: 99;
@@ -31,6 +31,9 @@ html,body{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.cursor h1{
+    font-size: 1.3vmax;
 }
 
 .page1{
@@ -40,7 +43,10 @@ html,body{
 }
 
 .page1 video{
+    height: 100%;
+    width: 100%;
     position: absolute;
+    object-fit: cover;
 }
 .page1-cont{
     height: 100vh;
@@ -71,8 +77,27 @@ nav{
     background-color: #FAF8F3;
 }
 .cont2{
-    border-bottom:  1px solid black ;
+    height: 30%;
+    padding: 5.4vmax 0vmax;
 }
 
+.page2-upper{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7vmax  0vmax;
+    border-bottom: 1px solid black;
+    margin-left: 4.5vmax;
+}
+.page2-text{
+    padding: 1vmax 3.6vmax;
+}
 
+.page2-text span{
+    width: 100%;
+    font-size: 4.2vmax;
+    line-height: 4vmax;
+}
 
