@@ -73,16 +73,21 @@ page1Cont.addEventListener("mouseleave" ,function(e){
 }
 cursorEffect()
 
+var tl1 = gsap.timeline()
+
+tl1.from(" .page1-cont h1",{
+  y : 60,
+  opacity : 0,
+  opacity : 0.3,
+  duration : 0.7
+})
+
 //-----------page2-------------------------------------------------------
 
-// Register ScrollTrigger plugin
-// gsap.registerPlugin(ScrollTrigger);
-
-// Create animation and ScrollTrigger
 gsap.from(".page2_el h1, .page2-upper",{
-  y:60,
+  y:67,
   stagger:0.2,
-  duration:0.85,
+  duration:0.7,
   opacity : 0.1,
   scrollTrigger:{
       trigger:".page2",
@@ -90,6 +95,6 @@ gsap.from(".page2_el h1, .page2-upper",{
       start:"top 68%",
       end:"top 37%",
       // markers:true,
-      scrub:4
+      scrub:3.5
   }
 })
