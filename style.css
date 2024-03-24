@@ -76,28 +76,45 @@ nav{
     width: 100%;
     background-color: #FAF8F3;
 }
-.cont2{
-    height: 30%;
-    padding: 5.4vmax 0vmax;
-}
 
 .page2-upper{
-    height: 100%;
-    width: 90%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.7vmax  0vmax;
-    border-bottom: 1px solid black;
-    margin-left: 4.5vmax;
+    /* padding-bottom: 1.2vw; */
+    /* margin-bottom: 1vw; */
+    /* border-bottom: 1px solid #00000092; */
+    padding: 3vmax 4vmax;
+   height: 5;
 }
-.page2-text{
-    padding: 1vmax 3.6vmax;
+.line{
+    height: 1px;
+    width: 92%;
+    background-color: black;
+    text-align: center;
+    margin-left: 4%;
+    position: absolute;
+    top: 60%;
 }
 
-.page2-text span{
-    width: 100%;
-    font-size: 4.2vmax;
-    line-height: 4vmax;
+ .page2-upper h3,.page2-upper h4{
+    font-size: 1.7vw;
+    font-weight: 500;
+    /* width: 26%; */
 }
+
+
+.elem h1:first-child{
+    text-align: center;
+}
+
+.elem h1{
+    font-size: 4.2vw;
+    font-weight: 500;
+    padding: 0 3vmax;
+    line-height: 5vmax;
+  
+}
+
 

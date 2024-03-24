@@ -75,16 +75,21 @@ cursorEffect()
 
 //-----------page2-------------------------------------------------------
 
-gsap.from(".logo h1",{
-  y:120,
-  stagger : 0.2,
-  duration : 1,
-  ScrollTrigger : {
-    trigger : ".cont2",
-    scroller : ".main",
-    start : "top 50%",
-    end : "top 46%",
-    markers : true,
-    scrub : 2
+// Register ScrollTrigger plugin
+// gsap.registerPlugin(ScrollTrigger);
+
+// Create animation and ScrollTrigger
+gsap.from(".page2_el h1, .page2-upper",{
+  y:60,
+  stagger:0.2,
+  duration:0.85,
+  opacity : 0.1,
+  scrollTrigger:{
+      trigger:".page2",
+      scroller:".main",
+      start:"top 68%",
+      end:"top 37%",
+      // markers:true,
+      scrub:4
   }
 })
