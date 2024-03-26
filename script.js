@@ -98,3 +98,41 @@ gsap.from(".page2_el h1, .page2-upper",{
       scrub:3.5
   }
 })
+
+//--------------------------------------------------------------page3----------
+
+gsap.from(".page3-upper",{
+  y:50,
+  stagger:0.3,
+  duration:0.2,
+  opacity : 0.1,
+  scrollTrigger:{
+      trigger:".page3",
+      scroller:".main",
+      start:"top 68%",
+      end:"top 37%",
+      // markers:true,
+      scrub:2
+  }
+})
+
+
+
+//-----------------------------------------------------page4-----------
+const tl4 = gsap.timeline()
+
+tl4.from(".ele4 h1",{
+  y:50,
+  stagger:0.3,
+  duration:0.2,
+  opacity : 0.1,
+  scrollTrigger:{
+    trigger:".page3",
+    scroller:".main",
+    start:"top 50%",
+    end:"top 37%",
+    // markers:true,
+    scrub:2
+  }
+
+})

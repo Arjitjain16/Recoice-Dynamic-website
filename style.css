@@ -106,7 +106,7 @@ nav{
     text-align: center;
 }
 
-.elem h1{
+.elem h1 {
     font-size: 4.2vw;
     font-weight: 500;
     padding: 0 3vmax;
@@ -122,7 +122,7 @@ nav{
 
 .page3-upper{
     margin-top: 15vh;
-    padding: 1vmax 2vmax;
+    /* padding: 1vmax 2vmax; */
 }
 .page3-upper h4{
     font-size: 3vh;
@@ -167,11 +167,39 @@ nav{
     position: absolute;
     transition: 0.7s linear all;
 }
-.box img:hover{
+.page3-boxes .box img:hover{
     cursor: pointer;
 }
 .page4{
     min-height: 100vh;
+    width: 100%;
+    background-color: #FAF8F3;
+    padding: 0.5vh;
+}
+.page4-upper{
+    height: 14vh;
+    width: 100%;
+    position: relative ;
+    margin-top : 10%;
+}
+.page4-upper h3{
+    padding: 0vmax 3.8vmax;
+    font-size: 1.5vmax;
+}
+.line2{
+    height: 1px;
+    width: 92%;
+    background-color: black;
+    text-align: center;
+    margin-left: 4%;
+    position: absolute;
+    top: 80%;
+}
+.ele4 h1 {
+    font-size: 4.2vw;
+    font-weight: 500;
+    padding: 0 4vmax;
+    line-height: 5vmax;
     width: 100%;
 }
 
