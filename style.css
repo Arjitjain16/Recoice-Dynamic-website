@@ -202,4 +202,39 @@ nav{
     line-height: 5vmax;
     width: 100%;
 }
+.page5{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FAF8F3;
+    position: relative;
+}
+.page5 video{
+    height: 100%;
+}
+.page5 svg{
+    position: absolute;
+    height: 60%;
+}
+.page6{
+    min-height: 100vh;
+    width: 100%;
+}
 
+.cursor2 {
+    width: 6.6vw;
+    height: 6.6vw;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%);
+    background-color: black;
+    color: #fff;
+}

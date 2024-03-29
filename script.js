@@ -136,3 +136,30 @@ tl4.from(".ele4 h1",{
   }
 
 })
+
+//-------------------------cursor2------------
+
+
+const page5 = document.querySelector(".page5")
+const cursor2 = document.querySelector(".cursor2")
+
+page5.addEventListener("mousemove" ,function(e){
+
+    gsap.to(cursor2 , {
+        x : e.x,
+        y : e.y
+    })
+})
+
+page5.addEventListener("mouseenter" ,function(e){
+    gsap.to(cursor2 , {
+        scale : 1
+    })
+   
+})
+page1Cont.addEventListener("mouseleave" ,function(e){
+    gsap.to(cursor2 , {
+        scale : 0
+    })
+})
+
