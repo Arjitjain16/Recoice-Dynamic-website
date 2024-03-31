@@ -75,12 +75,12 @@ cursorEffect()
 
 var tl1 = gsap.timeline()
 
-tl1.from(" .page1-cont h1",{
-  y : 60,
-  opacity : 0,
-  opacity : 0.3,
-  duration : 0.7
-})
+// tl1.from(" .page1-cont h1",{
+//   y : 60,
+//   opacity : 0,
+//   opacity : 0.3,
+//   duration : 0.7
+// })
 
 //-----------page2-------------------------------------------------------
 
@@ -140,26 +140,75 @@ tl4.from(".ele4 h1",{
 //-------------------------cursor2------------
 
 
-const page5 = document.querySelector(".page5")
-const cursor2 = document.querySelector(".cursor2")
+// const page5 = document.querySelector(".page5")
+// const cursor2 = document.querySelector(".cursor2")
 
-page5.addEventListener("mousemove" ,function(e){
+// page5.addEventListener("mousemove" ,function(e){
 
-    gsap.to(cursor2 , {
-        x : e.x,
-        y : e.y
-    })
-})
+//     gsap.to(cursor2 , {
+//         x : e.x,
+//         y : e.y
+//     })
+// })
 
-page5.addEventListener("mouseenter" ,function(e){
-    gsap.to(cursor2 , {
-        scale : 1
-    })
+// page5.addEventListener("mouseenter" ,function(e){
+//     gsap.to(cursor2 , {
+//         scale : 1
+//     })
    
-})
-page1Cont.addEventListener("mouseleave" ,function(e){
-    gsap.to(cursor2 , {
-        scale : 0
-    })
+// })
+// page1Cont.addEventListener("mouseleave" ,function(e){
+//     gsap.to(cursor2 , {
+//         scale : 0
+//     })
+// })
+
+//---------------------swipperjs code------------------------
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+
+//------------loader------------------------------------------------
+
+const tl = gsap.timeline()
+
+tl.from('.loader h3',{
+  x: 40,
+  opacity : 0,
+  stagger : 0.1,
+  duration : 1,
 })
 
+tl.to('.loader h3',{
+  opacity : 0,
+  x : -15,
+  stagger : 0.1,
+  duration : 0.8
+})
+
+tl.to(".loader",{
+  opacity : 0,
+  delay : 0.5
+})
+
+tl.to(".loader",{
+  display : "none",
+})
+
+tl.from(".page1-count h1 span",{
+  y : 100,
+  stagger : 0.3,
+  duration : 1
+})
